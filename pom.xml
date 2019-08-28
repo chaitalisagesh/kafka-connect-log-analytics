@@ -85,7 +85,7 @@
 						<configuration>
 							<title>Kafka Connect Log Analytics</title>
 							<sourceUrl>https://github.com/chaitalisagesh/kafka-connect-log-analytics</sourceUrl>
-							<documentationUrl>https://github.com/chaitalisagesh/kafka-connect-log-analytics/wiki/Kafka-Connect-Log-Analytics</documentationUrl>
+							<documentationUrl>https://github.com/chaitalisagesh/kafka-connect-log-analytics/wiki/kafka-connect-log-analytics</documentationUrl>
 							<description>
 								Kafka connect Sink Connector for Microsoft Log
 								Analytics
