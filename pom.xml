@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>io.kafka.connect</groupId>
+	<artifactId>kafka-connect-log-analytics</artifactId>
+	<version>0.1</version>
+	<name>kafka-connect-log-analytics</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<commons.lang.version>3.6</commons.lang.version>
+		<kafka.version>2.3.0</kafka.version>
+		<kafka.version1>0.10.2.2</kafka.version1>
+		<commons.codec.version>1.10</commons.codec.version>
+		<junit.version>4.11</junit.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons.codec.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons.lang.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>${kafka.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka_2.10</artifactId>
+			<version>${kafka.version1}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>connect-runtime</artifactId>
+			<version>${kafka.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>connect-api</artifactId>
+			<version>${kafka.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>connect-json</artifactId>
+			<version>${kafka.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-streams</artifactId>
+			<version>${kafka.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>io.confluent</groupId>
+				<version>0.10.0</version>
+				<artifactId>kafka-connect-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>kafka-connect</goal>
+						</goals>
+						<configuration>
+							<title>Kafka Connect Log Analytics</title>
+							<sourceUrl>https://github.com/chaitalisagesh/kafka-connect-log-analytics</sourceUrl>
+							<documentationUrl>https://github.com/chaitalisagesh/kafka-connect-log-analytics/wiki/Kafka-Connect-Log-Analytics</documentationUrl>
+							<description>
+								Kafka connect Sink Connector for Microsoft Log
+								Analytics
+							</description>
+
+							<ownerUsername>chaitalisagesh</ownerUsername>
+							<ownerType>User</ownerType>
+							<ownerName>Chaitali Sagesh Chullikattil</ownerName>
+							<componentTypes>
+								<componentType>sink</componentType>
+							</componentTypes>
+							<tags>
+								<tag>Microsoft</tag>
+								<tag>Log Analytics</tag>
+								<tag>Big Data</tag>
+							</tags>
+							<supportedEncodings>
+								<supportedEncoding>json</supportedEncoding>
+							</supportedEncodings>
+							<requirements>
+								<requirement>Log analytics workspace</requirement>
+							</requirements>
+							<deliveryGuarantee>
+								<deliveryGuarantee>atLeastOnce</deliveryGuarantee>
+							</deliveryGuarantee>
+							<confluentControlCenterIntegration>false</confluentControlCenterIntegration>
+							<licenses>
+								<license>
+									<name>Apache License, Version 2.0</name>
+									<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+								</license>
+							</licenses>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
