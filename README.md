@@ -7,12 +7,12 @@
 
 ## Connector Definition
 
- {	
-	“name”:”sink-connector-1”
-	"connector.class": "io.kafka.connect.log.anlaytics.sink.LogAnlayticsSinkTask",
-	"tasks.max": "1",
-	"workspaceId":"xxxxx-xxxx-xxxx-xxxx-xxxxxxxx",
-	"workspacekey":"xxxxxxxxxx==",
-	"topics": "DATASINKLOGS"
+ {	<br />
+	“name”:”sink-connector-1”<br />
+	"connector.class": "io.kafka.connect.log.anlaytics.sink.LogAnlayticsSinkTask",<br />
+	"tasks.max": "1",<br />
+	"workspaceId":"xxxxx-xxxx-xxxx-xxxx-xxxxxxxx",<br />
+	"workspacekey":"xxxxxxxxxx==",<br />
+	"topics": "DATASINKLOGS"<br />
 }
  
